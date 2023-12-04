@@ -1,3 +1,4 @@
+%Group name: Image-in That
 %Authors: George Rassam, Kylie Gilmet, Javier Quiros
 
 clc; clear;
@@ -25,7 +26,7 @@ MR_SA_DIA=rgb2gray(MR_SA_DIA);
 
 MR_LA_DIA=rgb2gray(MR_LA_DIA);
 
-make all images binary
+%make all images binary
 MR_SA_SYS = MR_SA_SYS > 115;
 
 MR_LA_SYS = MR_LA_SYS > 115;
@@ -42,3 +43,4 @@ pix_MR_LA_SYS=length((find(MR_LA_SYS==1)));
 pix_MR_SA_DIA=length((find(MR_SA_DIA==1)));
 
 pix_MR_LA_DIA=length((find(MR_LA_DIA==1)));
+
