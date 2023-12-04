@@ -44,3 +44,24 @@ pix_MR_SA_DIA=length((find(MR_SA_DIA==1)));
 
 pix_MR_LA_DIA=length((find(MR_LA_DIA==1)));
 
+%calculate the radius of the LV using the short axis area
+Area_SYS=round(sqrt((pix_MR_SA_SYS/pi)));
+
+Area_DIA=round(sqrt((pix_MR_SA_DIA/pi)));
+
+%get the length of the long axis MRI
+Length_SYS_p=size(MR_LA_SYS);
+Length_SYS=hypot(Length_SYS_p(1),Length_SYS_p(2));
+
+Length_DIA_p=size(MR_LA_DIA);
+Length_DIA=hypot(Length_DIA_p(1),Length_DIA_p(2));
+%calculate the volume of both ventricles
+ESV=(4/3)*pi*(Area_SYS)^2*Length_SYS;
+
+EDV=(4/3)*pi*(Area_DIA)^2*Length_DIA;
+
+%calcaulate ejection fraction
+EF=abs((EDV-ESV)/EDV);
+
+%display EF
+fprintf('The ejection fraction is %g',EF);
