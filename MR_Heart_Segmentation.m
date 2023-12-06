@@ -65,3 +65,4 @@ EF=abs((EDV-ESV)/EDV);
 
 %display EF
 fprintf('The ejection fraction is %g',EF);
+imshow(MR_SA_SYS)
