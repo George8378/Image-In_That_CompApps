@@ -7,7 +7,7 @@ User should have 4 cardiac MRI images that are a filetype readable by matlab suc
 The images should be a systolic short and long axis and diastolic short and long axis of the left ventricle.
 Images should only show the left ventricle of the heart.
 
-Download the Heart_Sementation.m and the four .png test images.
+Download the MR_Heart_Sementation.m and the four .png test images.
 
 sa_sys.png = short axis systolic
 la_sys.png = long axis systolic
